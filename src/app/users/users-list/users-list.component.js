@@ -49,7 +49,7 @@ class UsersList extends Component {
           hasMore={this.hasNextPage()}
           useWindow={false}
           threshold={50}
-          loader={<Placeholder key={0} />}
+          loader={<Placeholder key="users-list-placeholder" />}
         >
           {items}
         </InfiniteScroll>
