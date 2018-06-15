@@ -1,0 +1,28 @@
+:root {
+  --avatar-size: 64px;
+}
+
+.user-list-element__container {
+  height: 96px;
+  margin-left: 16px;
+  display: flex;
+  align-items: center;
+  border-bottom: solid 1px #eee;
+}
+
+.user-list-element__container__name {
+  flex: 1;
+  letter-spacing: 2px;
+ }
+
+.user-list-element__container__pic {
+  width: var(--avatar-size);
+  height: var(--avatar-size);
+  margin-right: 24px;
+}
+
+.user-list-element__container__pic img {
+  width: var(--avatar-size);
+  height: var(--avatar-size);
+  border-radius: calc(var(--avatar-size) / 2);
+}

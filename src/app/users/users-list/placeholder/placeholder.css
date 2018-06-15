@@ -1,0 +1,22 @@
+.placeholder__container {
+  height: 96px;
+  margin-left: 16px;
+  display: flex;
+  align-items: center;
+  border-bottom: solid 1px #eee;
+  opacity: 0.8;
+}
+
+.placeholder__container__name {
+  flex: 1;
+  letter-spacing: 2px;
+  color: #eee;
+}
+
+.placeholder__container__pic {
+  width: var(--avatar-size);
+  height: var(--avatar-size);
+  margin-right: 24px;
+  background-color: #eee;
+  border-radius: calc(var(--avatar-size) / 2);
+}
