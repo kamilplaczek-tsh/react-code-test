@@ -25,7 +25,15 @@ class UsersList extends Component {
       .then(response => response.json())
       .then((usersData) => {
         this.setState({
-          data: [...this.state.data, ...usersData.data],
+          // normally, we would send parameter like timestamp or id
+          // in order for the backend to handle infinite scroll pagination correctly
+          // another possibility for this particular case, since the ids are numeric
+          // and we are not sorting we could filter using the id like:
+          // usersData.data.filter(user => user.id > lastRetrievedId)
+          data: [
+            ...this.state.data,
+            ...usersData.data.filter(user => !this.state.data.find(u => u.id === user.id)),
+          ],
           totalPages: usersData.total_pages,
           currentPage: usersData.page,
         });
